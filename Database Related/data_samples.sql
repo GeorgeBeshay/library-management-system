@@ -1,7 +1,7 @@
 USE LibraryManagementSystemDB;
 GO
 
-INSERT INTO BOOK (Title, Author, PublicationYear, ISBN)
+INSERT INTO BOOK (title, author, publication_year, isbn)
 VALUES
   ('The Lord of the Rings', 'J.R.R. Tolkien', 1954, '9780261102694'),
   ('Pride and Prejudice', 'Jane Austen', 1813, '9780140439516'),
@@ -14,7 +14,7 @@ VALUES
   ('Don Quixote', 'Miguel de Cervantes', 1615, '9780140449922'),
   ('Crime and Punishment', 'Fyodor Dostoevsky', 1866, '9781491821371');
 
-INSERT INTO PATRON (FirstName, LastName, Email)
+INSERT INTO PATRON (first_name, last_name, email)
 VALUES
   ('John', 'Doe', 'johndoe@example.com'),
   ('Jane', 'Smith', 'janesmith@example.com'),
@@ -27,10 +27,10 @@ VALUES
   ('Jennifer', 'Lopez', 'jenniferlopez@example.com'),
   ('Christopher', 'Clark', 'christopherclark@example.com');
 
-INSERT INTO BORROWING (PatronID, BookID, StartDate, EndDate)
+INSERT INTO BORROWING (patron_id, book_id, start_date, end_date)
 VALUES
-  (1, 3, '2024-04-13', '2024-04-27'),  -- John Doe borrows "To Kill a Mockingbird"
-  (2, 5, '2024-04-13', '2024-04-27'),  -- Jane Smith borrows "The Catcher in the Rye"
-  (3, 1, '2024-04-13', '2024-04-27'),  -- Alice Johnson borrows "The Lord of the Rings"
-  (4, 7, '2024-04-13', '2024-04-27'),  -- Michael Brown borrows "The Great Gatsby"
-  (5, 9, '2024-04-13', '2024-04-27');   -- Emily Garcia borrows "Don Quixote"
+  (1, 3, '2024-04-13', null),  -- John Doe borrows "To Kill a Mockingbird"
+  (2, 5, '2024-04-13', null),  -- Jane Smith borrows "The Catcher in the Rye"
+  (3, 1, '2024-04-13', '2024-04-10'),  -- Alice Johnson borrows "The Lord of the Rings"
+  (4, 7, '2024-04-13', null),  -- Michael Brown borrows "The Great Gatsby"
+  (5, 9, '2024-04-13', '2024-04-11');   -- Emily Garcia borrows "Don Quixote"
