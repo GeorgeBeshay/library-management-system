@@ -1,0 +1,217 @@
+<html><head><meta charset="UTF-8"><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .image {
+            max-width: 100%; 
+            height: auto;
+            width: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+            max-height: 90vh;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        :root {
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1258341907">Project Overview</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1854109083">Database</a></div><div class="page">4</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#242207216">Testing</a></div><div class="page">6</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1515420892">Backend Server</a></div><div class="page">7</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1225500684">Helpful Resources</a></div><div class="page">8</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1258341907">Project Overview</h1><section><h2 id="-1258341907#project-name-maids-cc-library-management-system" data-toc="project-name-maids-cc-library-management-system#Project-Overview.md-project-name-maids-cc-library-management-system">Project Name: Maids.cc Library Management System</h2></section><section><h2 id="-1258341907#description" data-toc="description#Project-Overview.md-description">Description</h2><p id="-1258341907#x9slgo_221">The Maids.cc Library Management System is a robust API built using Spring Boot. It facilitates efficient management of books, patrons, and borrowing records in a library setting. Librarians can easily handle book additions, updates, and removals, as well as patron management and borrowing transactions.</p></section><section><h2 id="-1258341907#entities" data-toc="entities#Project-Overview.md-entities">Entities</h2><p id="-1258341907#x9slgo_222">Book: Represents information about each book in the library, including attributes such as ID, title, author, publication year, ISBN, etc. Patron: Contains details about library patrons, including ID, name, contact information, etc. Borrowing Record: Tracks the association between books and patrons, including borrowing and return dates.</p></section><section><h2 id="-1258341907#api-endpoints" data-toc="api-endpoints#Project-Overview.md-api-endpoints">API Endpoints</h2><section><h3 id="-1258341907#book-management-endpoints" data-toc="book-management-endpoints#Project-Overview.md-book-management-endpoints">Book Management Endpoints:</h3><ol class="list list-decimal" id="-1258341907#x9slgo_223" type="1" start="1"><li class="list-item" id="-1258341907#x9slgo_224"><p>GET /api/books: Retrieve a list of all books.</p></li><li class="list-item" id="-1258341907#x9slgo_225"><p>GET /api/books/: Retrieve details of a specific book by ID.</p></li><li class="list-item" id="-1258341907#x9slgo_226"><p>POST /api/books: Add a new book to the library.</p></li><li class="list-item" id="-1258341907#x9slgo_227"><p>PUT /api/books/: Update an existing book's information.</p></li><li class="list-item" id="-1258341907#x9slgo_228"><p>DELETE /api/books/: Remove a book from the library.</p></li></ol></section><section><h3 id="-1258341907#patron-management-endpoints" data-toc="patron-management-endpoints#Project-Overview.md-patron-management-endpoints">Patron Management Endpoints:</h3><ol class="list list-decimal" id="-1258341907#x9slgo_229" type="1" start="1"><li class="list-item" id="-1258341907#x9slgo_230"><p>GET /api/patrons: Retrieve a list of all patrons.</p></li><li class="list-item" id="-1258341907#x9slgo_231"><p>GET /api/patrons/: Retrieve details of a specific patron by ID.</p></li><li class="list-item" id="-1258341907#x9slgo_232"><p>POST /api/patrons: Add a new patron to the system.</p></li><li class="list-item" id="-1258341907#x9slgo_233"><p>PUT /api/patrons/: Update an existing patron's information.</p></li><li class="list-item" id="-1258341907#x9slgo_234"><p>DELETE /api/patrons/: Remove a patron from the system.</p></li></ol></section><section><h3 id="-1258341907#borrowing-endpoints" data-toc="borrowing-endpoints#Project-Overview.md-borrowing-endpoints">Borrowing Endpoints:</h3><ol class="list list-decimal" id="-1258341907#x9slgo_235" type="1" start="1"><li class="list-item" id="-1258341907#x9slgo_236"><p>POST /api/borrow//patron/: Allow a patron to borrow a book.</p></li><li class="list-item" id="-1258341907#x9slgo_237"><p>PUT /api/return//patron/: Record the return of a borrowed book by a patron.</p></li></ol></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1854109083">Database</h1><p id="1854109083#x8r5em_361">The library management system is designed to streamline the organization and retrieval of library resources. At the heart of this system lies a robust database schema, implemented using Microsoft SQL Server, which ensures efficient data management and integrity. The schema is composed of three primary entities: PATRON, BOOK, and BORROWING. The PATRON entity captures essential information about library members, including a unique ID, personal details, and contact information. The BOOK entity records the details of the library&rsquo;s book inventory, such as title, author, and publication year, each identified by a unique ID. The BORROWING entity serves as the linchpin that connects patrons to the books they borrow, tracking the borrowing period with start and end dates. This relational schema facilitates a one-to-many relationship between patrons and books, allowing for multiple borrowings while maintaining a clear record of transactions. By leveraging the capabilities of SQL Server, the system provides a scalable and reliable foundation for managing the library&rsquo;s operations.</p><section><h2 id="1854109083#backup-and-recovery" data-toc="backup-and-recovery#Database.md-backup-and-recovery">Backup And Recovery</h2><p id="1854109083#x8r5em_362">The backup and recovery aspect of the DB was implemented to allow the DBA the opportunity to backup the current state of the DB and copy it to any external secondary storage medium. <div class="container"><figure class="image-container"><img class="center image" id="1854109083#x8r5em_363" alt="backup_recovery.png" title="backup_recovery.png" src="D:/Productivity/Software%20Projects/maids.cc%20Task/docs/Writerside/images/backup_recovery.png" width="1100" height="633"><figcaption class="center-text">backup_recovery.png</figcaption></figure></div></p></section><section><h2 id="1854109083#borrowing-trigger" data-toc="borrowing-trigger#Database.md-borrowing-trigger">Borrowing Trigger</h2><p id="1854109083#x8r5em_364">A Trigger has been developed to insure the DB consistency when adding a borrow record, that is, we need to ensure the book being borrowed is not currently borrowed by someone else. <div class="container"><figure class="image-container"><img class="center image" id="1854109083#x8r5em_365" alt="borrow_trigger.png" title="borrow_trigger.png" src="D:/Productivity/Software%20Projects/maids.cc%20Task/docs/Writerside/images/borrow_trigger.png" width="929" height="644"><figcaption class="center-text">borrow_trigger.png</figcaption></figure></div></p></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="242207216">Testing</h1><p id="242207216#-p6vpb2_180">Due to the short time window given, unfortunately I was not able to cover multiple classes. However, I was able to cover only 2 of the 3 DAOs implemented, and no Endpoints were tested professionally.</p><div class="container"><figure class="image-container"><img class="center image" id="242207216#-p6vpb2_181" alt="testing.png" title="testing.png" src="D:/Productivity/Software%20Projects/maids.cc%20Task/docs/Writerside/images/testing.png" width="1310" height="617"><figcaption class="center-text">testing.png</figcaption></figure></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1515420892">Backend Server</h1><p id="1515420892#-8u6au7_174">The class diagram is attached in the <span class="inline-code" id="1515420892#-8u6au7_175">Design</span> directory within the project repository.</p></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1225500684">Helpful Resources</h1><p id="-1225500684#-9rhmaf_19">This section of the software documentation, I'll be attaching few online free resources that I've found helpful in some point during the software development.</p><ol class="list list-decimal" id="-1225500684#-9rhmaf_20" type="1" start="1"><li class="list-item" id="-1225500684#-9rhmaf_21"><p>Logging With AOP in Spring (<a href="https://www.baeldung.com/spring-aspect-oriented-programming-logging">https://www.baeldung.com/spring-aspect-oriented-programming-logging</a>)</p></li><li class="list-item" id="-1225500684#-9rhmaf_23"><p>Implementing Logging Using Aspect-Oriented Programming (AOP) - Spring: .. (<a href="https://youtu.be/fdRKqzEWJqw?si=fdQthyFrDDmzvbPf">https://youtu.be/fdRKqzEWJqw?si=fdQthyFrDDmzvbPf</a>)</p></li></ol></article></div></section></div></body></html>
