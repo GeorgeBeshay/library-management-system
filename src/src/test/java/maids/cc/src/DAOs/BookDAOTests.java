@@ -9,9 +9,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -181,7 +179,7 @@ public class BookDAOTests {
     }
 
     @Test
-    @DisplayName("Delete Book - Balid")
+    @DisplayName("Delete Book - Valid")
     public void testDeleteBookValid() {
         // Arrange
         Book book = createSampleBook();
