@@ -7,11 +7,11 @@ IF
 dbo.relation_exists(@inputTableName) = 0
 BEGIN
     CREATE TABLE PATRON (
-      ID int PRIMARY KEY IDENTITY(1, 1),
-      FirstName nvarchar(50) NOT NULL,
-      LastName nvarchar(50) NOT NULL,
-      Email nvarchar(255) CONSTRAINT CK_Patron_Email UNIQUE NOT NULL,
-      CHECK (Email LIKE '%@%')
+      id int PRIMARY KEY IDENTITY(1, 1),
+      first_name nvarchar(50) NOT NULL,
+      last_name nvarchar(50) NOT NULL,
+      email nvarchar(255) CONSTRAINT CK_Patron_Email UNIQUE NOT NULL,
+      CHECK (email LIKE '%@%')
     );
 END
 ELSE
@@ -27,12 +27,12 @@ IF
 dbo.relation_exists(@inputTableName) = 0
 BEGIN
     CREATE TABLE BOOK (
-      ID int PRIMARY KEY IDENTITY(1, 1),
-      Title nvarchar(255) NOT NULL,
-      Author nvarchar(255) NOT NULL,
-      PublicationYear int,
-      ISBN nvarchar(13) CONSTRAINT CK_Book_ISBN UNIQUE NOT NULL,
-      CHECK (LEN(ISBN) = 13)
+      id int PRIMARY KEY IDENTITY(1, 1),
+      title nvarchar(255) NOT NULL,
+      author nvarchar(255) NOT NULL,
+      publication_year int,
+      isbn nvarchar(13) CONSTRAINT CK_Book_ISBN UNIQUE NOT NULL,
+      CHECK (LEN(isbn) = 13)
     );
 END
 ELSE
@@ -48,11 +48,11 @@ IF
 dbo.relation_exists(@inputTableName) = 0
 BEGIN
     CREATE TABLE BORROWING (
-      PatronID int NOT NULL FOREIGN KEY REFERENCES PATRON(ID),
-      BookID int NOT NULL FOREIGN KEY REFERENCES BOOK(ID),
-      StartDate date NOT NULL,
-      EndDate date NOT NULL,
-      CONSTRAINT PK_Borrowing PRIMARY KEY (PatronID, BookID)
+      patron_id int NOT NULL FOREIGN KEY REFERENCES PATRON(ID),
+      book_id int NOT NULL FOREIGN KEY REFERENCES BOOK(ID),
+      start_date date NOT NULL,
+      end_date date,
+      CONSTRAINT PK_Borrowing PRIMARY KEY (patron_id, book_id, start_date)
     );
 END
 ELSE
