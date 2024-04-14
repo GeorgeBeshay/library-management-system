@@ -2,17 +2,17 @@ package maids.cc.src.DMOs;
 
 import java.util.Objects;
 
-public class Book {
+public class Book implements Identifiable {
 
     private int id;
     private String title;
     private String author;
-    private String publicationYear;
+    private int publicationYear;
     private String isbn;
 
     public Book() {}
 
-    public Book(int id, String title, String author, String publicationYear, String isbn) {
+    public Book(int id, String title, String author, int publicationYear, String isbn) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -44,11 +44,11 @@ public class Book {
         this.author = author;
     }
 
-    public String getPublicationYear() {
+    public int getPublicationYear() {
         return publicationYear;
     }
 
-    public void setPublicationYear(String publicationYear) {
+    public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
 

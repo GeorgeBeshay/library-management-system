@@ -2,7 +2,7 @@ package maids.cc.src.DMOs;
 
 import java.util.Objects;
 
-public class Patron {
+public class Patron implements Identifiable {
 
     private int id;
     private String firstName;
