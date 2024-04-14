@@ -6,8 +6,10 @@
                  start-page="Project-Overview.md">
 
     <toc-element topic="Project-Overview.md"/>
+    <toc-element topic="How-To-Use.md"/>
     <toc-element topic="Database.md"/>
     <toc-element topic="Testing.md"/>
     <toc-element topic="Backend-Server.md"/>
+    <toc-element topic="Future-Work.md"/>
     <toc-element topic="Helpful-Resources.md"/>
 </instance-profile>

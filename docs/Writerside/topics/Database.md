@@ -14,6 +14,9 @@ multiple borrowings while maintaining a clear record of transactions.
 By leveraging the capabilities of SQL Server, the system provides a scalable and reliable foundation for 
 managing the library’s operations.
 
+## ERD
+![ERD.svg](ERD.svg)
+
 ## Backup And Recovery
 The backup and recovery aspect of the DB was implemented to allow the DBA the opportunity to backup
 the current state of the DB and copy it to any external secondary storage medium.

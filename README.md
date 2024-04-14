@@ -2,6 +2,10 @@
 
 Welcome to the Maids.cc Library Management System! This system is designed to provide efficient management of books, patrons, and borrowing records in a library setting. Whether you're a librarian or a patron, this API-based system offers a seamless experience for managing library resources.
 
+## Documentation:
+
+A web-based documentation is available through the following [link](https://georgebeshay.github.io/library-management-system/project-overview.html)
+
 ## Features:
 
 - **Book Management:** Add, update, and remove books from the library collection. Retrieve details of specific books or get a list of all books available.
@@ -20,12 +24,6 @@ To get started with the Maids.cc Library Management System, follow these steps:
 3. **Interact with the API:**
 - Use tools like Postman or curl to interact with the API endpoints.
 - Refer to the API documentation for details on available endpoints and their usage.
-
----
-
-## Documentation:
-
-For detailed documentation of the application, refer to the [documentation](https://github.com/GeorgeBeshay/library-management-system/blob/main/docs/pdfSourceHI.pdf)`.
 
 ---
 
